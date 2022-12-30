@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from blog.routers import task
+from routers import task
 
 app = FastAPI()
 
