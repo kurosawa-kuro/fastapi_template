@@ -1,13 +1,7 @@
 from fastapi import FastAPI
-from routers import task
+from routers import task,done
 
 app = FastAPI()
 
 app.include_router(task.router)
-# app.include_router(done.router)
-# Base.metadata.create_all(engine)
-
-@app.get("/hello")
-async def create():
-    return {'data':'hello world'}
-
+app.include_router(done.router)
