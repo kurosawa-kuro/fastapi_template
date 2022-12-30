@@ -11,7 +11,7 @@ async def list_tasks():
 
 @router.post("/tasks",response_model=task_schema.TaskCreateResponse)
 async def create_task(task_body:task_schema.TaskCreate):
-    # print(task_body)
+    print(task_body)
     # print(task_schema.TaskCreateResponse(title='sss'))
     
     return task_schema.TaskCreateResponse(id=1, title=task_body.title)
